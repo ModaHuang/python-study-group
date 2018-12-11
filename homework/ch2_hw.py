@@ -18,7 +18,7 @@ print(paragraph_lower_replace)
 
 # Q3: 印出這個段落有多少個英文單字(不含標點符號與空白)
 paragraph_replace = paragraph.replace('-', ' ')
-len(paragraph_replace.split())
+print(len(paragraph_replace.split()))
 
 # Q4: x = 1, y = 6, 把兩個變數的值交換, 讓他變成 x = 6, y = 1, 只能使用加減乘除, 不能使用第三個變數
 x = 1
