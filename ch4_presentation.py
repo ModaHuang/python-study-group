@@ -1,7 +1,7 @@
 def debug(variable_name, variable):
     print(variable_name, "=", variable, "\n    type =", type(variable))
 
-# # 註解 : # 與 '''
+# 註解 : # 與 '''
 # print("我是第一行")
 # print("我是第二行")
 # print("我是第三行")
@@ -9,7 +9,7 @@ def debug(variable_name, variable):
 # print("我是第五行")
 
 
-# # 用 \ 來延續多行
+# 用 \ 來延續多行
 # paragraph1 = '''
 # Most discussions of GraphQL focus on data fetching, but any complete data platform needs a way to modify server-side data as well.
 # In REST, any request might end up causing some side-effects on the server, but by convention it's suggested that one doesn't use GET requests to modify data. GraphQL is similar - technically any query could be implemented to cause a data write. However, it's useful to establish a convention that any operations that cause writes should be sent explicitly via a mutation.
@@ -43,7 +43,7 @@ def debug(variable_name, variable):
 
 
 # # elif
-# color = "moda"
+# color = "bee purple"
 # if color == "red":
 #     print("It's a tomato")
 # elif color == "green":
@@ -62,15 +62,17 @@ def debug(variable_name, variable):
 # greater than >
 # greater than or equal >=
 # membership in ...
-# x = 9
+# x = 7
+# debug("x", x)
 # print("x =", x)
-# print("x == 5,", x == 5)
+# print("x == 9,", x == '9')
+# # print("x === 5,", x === 5)
 # print("x == 7,", x == 7)
 # print("5 < x,", 5 < x)
 # print("x < 5,", x < 5)
 # print("x in (1, 3, 5, 7),", x in (1, 3, 5, 7))
 # # ===== 分隔線 ==== 若 if 順序寫錯了
-# x = 9
+# x = 10000
 # if x < 0:
 #     print("x 是負數")
 # elif x == 0:
@@ -110,7 +112,7 @@ def debug(variable_name, variable):
 # empty set set()
 #
 # # "非 False" 就會被當成 True
-# flag = {}
+# flag = '0'
 # if flag:
 #     print("我是 True 的第一行!")
 #     print("我是 True 的第二行!")
@@ -132,10 +134,10 @@ def debug(variable_name, variable):
 # print(5)
 #
 # count = 1
-# while count <= 5:
+# while count <= 10:
 #     print(count)
-#     count += 1
-# # print("我是 while 區塊外的 count, count =", count)
+#     count += 3
+# print("我是 while 區塊外的 count, count =", count)
 
 # # while : break
 # while True:
@@ -144,7 +146,7 @@ def debug(variable_name, variable):
 #         break
 #     print(stuff.capitalize())
 
-# # while : continue
+# while : continue
 # while True:
 #     value = input("Integer, please [q to quit]: ")
 #     if value == "q":
@@ -154,17 +156,17 @@ def debug(variable_name, variable):
 #         continue
 #     print(number, "squared is", number * number)
 #
-# # 題目 : 從 1 print 到 5，但跳過偶數
+# # 題目 : 從 1 print 到 11，但跳過偶數
 # count = 1
 # while count <= 11:
 #     if count % 2 == 0:
-# #        count += 1
-#         continue
+#        count += 1
+#        continue
 #     print(count)
 #     count += 1
 
 # # while : else
-# numbers = [1, 3, 5]
+# numbers = [1, 3, 5, 3, 9]
 # position = 0
 # while position < len(numbers):
 #     number = numbers[position]
@@ -172,13 +174,13 @@ def debug(variable_name, variable):
 #         print('Found even number', number)
 #         break
 #     position += 1
-# else: # break not called
+# else:  # break not called
 #     print('No even number found')
 
 
 # # for
 
-# rabbits = ['Flopsy', 'Mopsy', 'Cottontail', 'Peter']
+rabbits = ['Flopsy', 'Mopsy', 'Cottontail', 'Peter', 'moda1', 'moda2']
 # print(rabbits[0])
 # print(rabbits[1])
 # print(rabbits[2])
@@ -211,19 +213,19 @@ def debug(variable_name, variable):
 # accusation = {'room': 'ballroom',
 #               'weapon': 'lead pipe',
 #               'person': 'Col. Mustard'}
-#
+
 # debug("accusation", accusation)
 # for card in accusation:  # or, for card in accusation.keys():
 #     print(card)
-#
+# #
 # debug("accusation.values()", accusation.values())
 # for value in accusation.values():
 #     print(value)
-#
+# #
 # debug("accusation.items()", accusation.items())
 # for item in accusation.items():
 #     print(item)
-#
+# #
 # debug("accusation.items()", accusation.items())
 # for card, contents in accusation.items():
 #     print('Card', card, 'has the contents', contents)
@@ -232,11 +234,11 @@ def debug(variable_name, variable):
 # # for 也有 break 跟 continue
 
 # # for : else - 若沒執行 break 才執行 else
-# cheeses = ['a']
+# cheeses = []
 # for cheese in cheeses:
 #     print('This shop has some lovely', cheese)
 #     break
-# else: # no break means no cheese
+# else:  # no break means no cheese
 #     print('This is not much of a cheese shop, is it?')
 
 
@@ -248,7 +250,7 @@ def debug(variable_name, variable):
 # debug("zip(days, fruits, drinks, desserts)", zip(days, fruits, drinks, desserts))
 # for day, fruit, drink, dessert in zip(days, fruits, drinks, desserts):
 #     print(day, ": drink", drink, "- eat", fruit, "- enjoy", dessert)
-#
+
 # english = 'Monday', 'Tuesday', 'Wednesday'
 # french = 'Lundi', 'Mardi', 'Mercredi'
 # debug("list(zip(english, french))", list(zip(english, french)))
@@ -256,10 +258,10 @@ def debug(variable_name, variable):
 
 
 # # range( start, stop, step )
-# for x in range(0,3):
+# for x in range(0, 3):
 #     print(x)
 #
-# for x in range(2, -1, -1):
+# for x in range(2, -10, -2):
 #     print(x)
 #
 # for x in range(0, 11, 2):
@@ -281,7 +283,7 @@ def debug(variable_name, variable):
 # 用 for 跟 range()
 # number_list = []
 # for number in range(1, 6):
-#     number_list.append(number)
+#     number_list.append(number-1)
 # debug("number_list", number_list)
 #
 # 用 list()
@@ -289,20 +291,21 @@ def debug(variable_name, variable):
 # debug("number_list", number_list)
 #
 # python style
-# number_list = [number for number in range(1,6)]
+# number_list = [number for number in range(1, 6)]
 # debug("number_list", number_list)
 #
 # number_list = [number-1 for number in range(1,6)]
 # debug("number_list", number_list)
 #
-# number_list = [number for number in range(1,6) if number % 2 == 1]
+# number_list = [number for number in range(1, 60) if number % 3 == 2]
 # debug("number_list", number_list)
 #
 # 用 for 實作
 # a_list = []
-# for number in range(1,6):
-#     if number % 2 == 1:
-#         a_list.append(number)
+# if number % 2 == 1:
+#     a_list.append(number)
+# for number in range(1,60):
+#     pass
 # debug("a_list", a_list)
 #
 # # 雙層 for 迴圈
@@ -313,31 +316,34 @@ def debug(variable_name, variable):
 #         print(row, col)
 #
 # python style
-# rows = range(1,4)
-# cols = range(1,3)
-# cells = [(row, col) for row in rows for col in cols]
+rows = range(1,4)
+cols = range(1,3)
+cells = [(row, col) for row in rows for col in cols]
 # debug("cells", cells)
+
+
 # for cell in cells:
 #     print(cell)
-# # tuple unpacking
+# tuple unpacking
 # for row, col in cells:
 #     print(row, col)
 
 
 # # 字典生成式
-word = 'abbcccddddeeeee'
+# word = 'abbcccddddeeeee'
 # letter_counts = {letter: word.count(letter) for letter in word}
 # debug("letter_counts", letter_counts)
 #
 # 用 for 實作
 # letter_counts = {}
 # for letter in word:
-    # debug("letter", letter)
-    # debug("word.count("+letter+")", word.count(letter))
-    # letter_counts[letter] = word.count(letter)
-    # # letter_counts['a'] = 1
-    # # letter_counts['b'] = 2
-    # debug("letter_counts", letter_counts)
+#     debug("letter", letter)
+#     debug("word.count("+letter+")", word.count(letter))
+#     letter_counts[letter] = word.count(letter)
+    # letter_counts['a'] = word.count('a')
+    # letter_counts['a'] = 1
+    # letter_counts['b'] = 2
+#     debug("letter_counts", letter_counts)
 # debug("letter_counts", letter_counts)
 #
 # # 不重複跑的寫法 (例如本來 'd' 會跑三次)
@@ -365,7 +371,7 @@ word = 'abbcccddddeeeee'
 #         print("I've never heard of the color", color)
 #
 #
-# comment = commentary('bee purple"')
+# comment = commentary('moda')
 # debug("comment", comment)
 
 
@@ -373,11 +379,11 @@ word = 'abbcccddddeeeee'
 # def is_none(thing):
 #     if thing is None:
 #         print("It's None")
-#     elif:
+#     elif thing:
 #         print("It's True")
 #     else:
 #         print("It's False")
-#
+
 # is_none(None)
 # is_none(True)
 # is_none(False)
@@ -387,18 +393,24 @@ word = 'abbcccddddeeeee'
 # is_none([])
 # is_none({})
 # is_none(set())
+# is_none('moda')
 
 # # 引數類型
-# def menu(wine, entree, dessert):
-#     return {'wine':wine,'entree':entree,'dessert':dessert }
-#
-#
 # # 位置引數
+# def menu(wine, entree, dessert):
+#     return {'wine': wine, 'entree': entree, 'dessert': dessert}
+
+
+# menu('chardonny','chichen','cake')
 # debug("menu('chardonny','chichen','cake')", menu('chardonny','chichen','cake'))
 # # 關鍵字引數
 # menu(entree='beef', dessert='bagel', wine='bordeaux')
 # debug("menu(entree='beef', dessert='bagel', wine='bordeaux')", menu(entree='beef', dessert='bagel', wine='bordeaux'))
 # # 混合著用 : 位置引數必須放前面
+# menu('frontenac', dessert='flan', entree='fish')
+# debug("menu('frontenac', dessert='flan', entree='fish')", menu('frontenac', dessert='flan', entree='fish'))
+# #  像這樣就會出錯了
+# menu('frontenac', wine='flan', entree='fish')
 # debug("menu('frontenac', dessert='flan', entree='fish')", menu('frontenac', dessert='flan', entree='fish'))
 # # 指定預設參數值
 # def menu(wine, entree, dessert='pudding'):
@@ -474,7 +486,7 @@ word = 'abbcccddddeeeee'
 #     'echo returns its input argument'
 #     return anything
 #
-#
+
 # def print_if_true(thing, check):
 #     '''
 #     Prints the first argument if a second argument is true.
@@ -485,11 +497,12 @@ word = 'abbcccddddeeeee'
 #     if check: print(thing)
 #
 #
-# help(echo)
-# print(echo.__doc__)
-#
-# help(print_if_true)
-# print_if_true(word, True)
+# # help(echo)
+# # print(echo.__doc__)
+# #
+# # help(print_if_true)
+# word = 'moda'
+# print_if_true(word)
 
 
 # # 把 function 當引數，丟給另一個 function
@@ -504,9 +517,9 @@ word = 'abbcccddddeeeee'
 #     func()
 #
 #
-# # run_something(answer)
+# run_something(answer)
 # # run_something(answer())
-# # debug("run_something", run_something)
+# debug("run_something", run_something)
 
 # # ===== 分隔線 =====
 # def add_args(arg1, arg2):
@@ -515,6 +528,7 @@ word = 'abbcccddddeeeee'
 #
 # def run_something_with_args(func, arg1, arg2):
 #     func(arg1, arg2)
+#     # add_args(5, 9)
 #
 #
 # run_something_with_args(add_args, 5, 9)
@@ -538,7 +552,8 @@ word = 'abbcccddddeeeee'
 # def outer(a, b):
 #     def inner(c, d):
 #         return c + d
-#     return inner(a, b)
+#     print(inner(a, b))
+#
 #
 #
 # debug("outer(4, 7)", outer(4, 7))
