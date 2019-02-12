@@ -155,3 +155,49 @@ debug("150 temp1.queue", temp1.queue)
 debug("151 temp2.queue", temp2.queue)
 
 
+temp3 = kstack.kstack()
+temp4 = kstack.kstack()
+
+for element in input_list:
+    if temp3.size() == 0:
+        temp3.push(element)
+        for x in temp4.stack:
+            temp3.push(x)
+        temp4 = kstack.kstack()
+        # debug("167 temp3.stack", temp3.stack)
+        # debug("168 temp4.stack", temp4.stack)
+    elif None == temp3.top() or element >= temp3.top():
+        temp3.push(element)
+        for x in temp4.stack:
+            temp3.push(x)
+        temp4 = kstack.kstack()
+        # debug("174 temp3.stack", temp3.stack)
+        # debug("175 temp4.stack", temp4.stack)
+    else:
+        if element <= temp3.stack[0]:
+            temp4.push(element)
+            for x in temp3.stack:
+                temp4.push(x)
+            temp3 = kstack.kstack()
+            for x in temp4.stack:
+                temp3.push(x)
+            temp4 = kstack.kstack()
+            # debug("185 temp3.stack", temp3.stack)
+            # debug("186 temp4.stack", temp4.stack)
+        else:
+            while temp3.size() == 0 or element > temp3.stack[0]:
+                temp4.push(temp3.pop())
+                if temp3.size() == 0:
+                    temp3.push(element)
+                # debug("190 temp3.stack", temp3.stack)
+                # debug("191 temp4.stack", temp4.stack)
+                if element >= temp3.top():
+                    temp3.push(element)
+                    for x in temp4.stack:
+                        temp3.push(x)
+                    temp4 = kstack.kstack()
+                    break
+
+
+debug("204 temp3.stack", temp3.stack)
+debug("205 temp4.stack", temp4.stack)
