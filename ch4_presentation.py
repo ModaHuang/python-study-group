@@ -316,9 +316,9 @@ rabbits = ['Flopsy', 'Mopsy', 'Cottontail', 'Peter', 'moda1', 'moda2']
 #         print(row, col)
 #
 # python style
-rows = range(1,4)
-cols = range(1,3)
-cells = [(row, col) for row in rows for col in cols]
+# rows = range(1,4)
+# cols = range(1,3)
+# cells = [(row, col) for row in rows for col in cols]
 # debug("cells", cells)
 
 
@@ -580,14 +580,14 @@ cells = [(row, col) for row in rows for col in cols]
 # def edit_story(words, func):
 #     for word in words:
 #         print(func(word))
-#
-#
+
+
 # def enliven(word):  # give that prose more punch
 #     return word.capitalize() + '!'
-#
-#
+
+
 # stairs = ['thud', 'meow', 'thud', 'hiss']
-# edit_story(stairs, enliven)
+# # edit_story(stairs, enliven)
 # edit_story(stairs, lambda word: word.capitalize() + '!')
 
 
@@ -597,6 +597,7 @@ cells = [(row, col) for row in rows for col in cols]
 #     number = first
 #     while number < last:
 #         yield number
+#         # return number
 #         number += step
 #
 #
@@ -647,9 +648,9 @@ cells = [(row, col) for row in rows for col in cols]
 
 
 # # 命名空間與範圍
-# animal = 'fruitbat'
-#
-# # function 可以讀全域變數
+animal = 'fruitbat'
+
+# function 可以讀全域變數
 # def print_global():
 #     print('inside print_global:', animal)
 #
@@ -718,25 +719,26 @@ cells = [(row, col) for row in rows for col in cols]
 
 # # try 與 expect
 # short_list = [1, 2, 3]
-# position = 5
-# # try:
-# #     short_list[position]
-# # except:
-# # #     print('Need a position between 0 and', len(short_list)-1, ' but got', position)
+# position = 1
+# try:
+#     short_list[position]
+# except:
+#     print('Need a position between 0 and', len(short_list)-1, ' but got', position)
+
 #
-#
-# short_list = [1, 2, 3]
-# while True:
-#     value = input('Position [q to quit]? ')
-#     if value == 'q':
-#         break
-#     try:
-#         position = int(value)
-#         print(short_list[position])
-#     except IndexError as err:
-#         print('Bad index:', position)
-#     except Exception as other:
-#         print('Something else broke:', other)
+short_list = [1, 2, 3]
+while True:
+    value = input('Position [q to quit]? ')
+    if value == 'q':
+        break
+    try:
+        position = int(value)
+        print(short_list[position])
+    except IndexError as err:
+        print('Bad index:', position)
+        debug("err", err)
+    except Exception as other:
+        print('Something else broke:', other)
 
 
 # # # 製作你自己的例外 - ch6 類別看完再回來看
