@@ -110,15 +110,9 @@ kqueue_temp = kqueue.kqueue()
 for element in input_list:
     if kqueue1.size() == 0:
         kqueue1.push(element)
-        for x in kqueue_temp.queue:
-            kqueue1.push(x)
-        kqueue_temp = kqueue.kqueue()
 
     elif None == kqueue1.back() or element >= kqueue1.back():
         kqueue1.push(element)
-        for x in kqueue_temp.queue:
-            kqueue1.push(x)
-        kqueue_temp = kqueue.kqueue()
 
     else:
         if element <= kqueue1.front():
@@ -154,16 +148,9 @@ kstack_temp = kstack.kstack()
 for element in input_list:
     if kstack1.size() == 0:
         kstack1.push(element)
-        for x in kstack_temp.stack:
-            kstack1.push(x)
-        kstack_temp = kstack.kstack()
 
     elif None == kstack1.top() or element >= kstack1.top():
         kstack1.push(element)
-        kstack_temp.push(kstack1.pop())
-        for x in kstack_temp.stack:
-            kstack1.push(x)
-        kstack_temp = kstack.kstack()
 
     else:
         if element <= kstack1.stack[0]:
