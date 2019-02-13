@@ -112,7 +112,9 @@ for element in input_list:
         kqueue1.push(element)
 
     else:
-        if element <= kqueue1.front():
+        while element > kqueue1.front():
+            kqueue_temp.push(kqueue1.pop())
+        else:
             kqueue_temp.push(element)
 
             for x in kqueue1.queue:
@@ -122,21 +124,6 @@ for element in input_list:
             for x in kqueue_temp.queue:
                 kqueue1.push(x)
             kqueue_temp = kqueue.kqueue()
-
-        else:
-            while element > kqueue1.front():
-                kqueue_temp.push(kqueue1.pop())
-
-            else:
-                kqueue_temp.push(element)
-
-                for x in kqueue1.queue:
-                    kqueue_temp.push(x)
-                kqueue1 = kqueue.kqueue()
-
-                for x in kqueue_temp.queue:
-                    kqueue1.push(x)
-                kqueue_temp = kqueue.kqueue()
 
 
 debug("kqueue1.queue", kqueue1.queue)
