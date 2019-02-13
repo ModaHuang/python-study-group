@@ -151,8 +151,8 @@ for element in input_list:
                 # debug("142 temp2.queue", temp2.queue)
 
 
-debug("150 temp1.queue", temp1.queue)
-debug("151 temp2.queue", temp2.queue)
+debug("temp1.queue", temp1.queue)
+debug("temp2.queue", temp2.queue)
 
 
 temp3 = kstack.kstack()
@@ -199,5 +199,5 @@ for element in input_list:
                     break
 
 
-debug("204 temp3.stack", temp3.stack)
-debug("205 temp4.stack", temp4.stack)
+debug("temp3.stack", temp3.stack)
+debug("temp4.stack", temp4.stack)
