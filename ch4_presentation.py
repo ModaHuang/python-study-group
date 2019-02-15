@@ -330,17 +330,17 @@ rabbits = ['Flopsy', 'Mopsy', 'Cottontail', 'Peter', 'moda1', 'moda2']
 
 
 # # 字典生成式
-# word = 'abbcccddddeeeee'
-# letter_counts = {letter: word.count(letter) for letter in word}
+word = 'abbcccddddeeeee'
+letter_counts = {letter: word.count(letter) for letter in word}
 # debug("letter_counts", letter_counts)
 #
 # 用 for 實作
-# letter_counts = {}
-# for letter in word:
-#     debug("letter", letter)
-#     debug("word.count("+letter+")", word.count(letter))
-#     letter_counts[letter] = word.count(letter)
-    # letter_counts['a'] = word.count('a')
+letter_counts = {}
+for letter in word:
+    # debug("letter", letter)
+    # debug("word.count("+letter+")", word.count(letter))
+    letter_counts[letter] = word.count(letter)
+    letter_counts['a'] = word.count('a')
     # letter_counts['a'] = 1
     # letter_counts['b'] = 2
 #     debug("letter_counts", letter_counts)
@@ -353,6 +353,7 @@ rabbits = ['Flopsy', 'Mopsy', 'Cottontail', 'Peter', 'moda1', 'moda2']
 
 # # 集合生成式
 # a_set = {number for number in range(1,6) if number % 3 == 1}
+# a_set = {number for number in range(1,6)}
 # debug("a_set", a_set)
 
 # tuple 沒有生成式，同樣語法會變成 "產生器生成式"，p105 會講到
