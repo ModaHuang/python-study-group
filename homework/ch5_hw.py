@@ -114,7 +114,6 @@ for element in input_list:
     else:
         while kqueue1.size() != 0 and element >= kqueue1.front():
             kqueue_temp.push(kqueue1.pop())
-
         else:
             kqueue_temp.push(element)
             while kqueue1.size() != 0:
@@ -123,7 +122,6 @@ for element in input_list:
                 kqueue1.push(kqueue_temp.pop())
 
 debug("kqueue1.queue", kqueue1.queue)
-# debug("kqueue_temp.queue", kqueue_temp.queue)
 
 
 kstack1 = kstack.kstack()
@@ -133,14 +131,11 @@ for element in input_list:
     if kstack1.size() == 0 or element >= kstack1.top():
         kstack1.push(element)
     else:
-        while kstack1.size() != 0 and element <= kstack1.top():
+        while kstack1.size() != 0 and element < kstack1.top():
             kstack_temp.push(kstack1.pop())
         else:
             kstack1.push(element)
             while kstack_temp.size() != 0:
                 kstack1.push(kstack_temp.pop())
 
-
-
 debug("kstack1.stack", kstack1.stack)
-# debug("kstack_temp.stack", kstack_temp.stack)
